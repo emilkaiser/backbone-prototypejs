@@ -354,5 +354,5 @@
         new Ajax.Request(params.url, parameters);
     };
 
-    Backbone.setDomLibrary(domLibraryAdapter);
+    Backbone.$ = domLibraryAdapter;
 })(window);
