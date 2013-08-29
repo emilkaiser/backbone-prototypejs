@@ -157,8 +157,8 @@
          *
          * @return PrototypeAdapter The object the method was called on.
          */
-        bind: function(eventName, method) {
-            return this.delegate(null, eventName, method);
+        on: function(eventName, selector, method) {
+            return this.delegate(eventName, selector, method);
         },
 
         /**
@@ -167,7 +167,7 @@
          * @param eventName:String Either a simple event name like 'click' or namespaced 'click.ns' or 
          *      '.ns' or '' or '' or 'click.ns1.ns2'
          */
-        unbind: function(eventName) {
+        off: function(eventName) {
             event = this._parseEventNamespaces(eventName);
 
             for (var i = 0; i < this.length; i++) {
