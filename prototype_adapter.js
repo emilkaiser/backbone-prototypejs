@@ -158,7 +158,7 @@
          * @return PrototypeAdapter The object the method was called on.
          */
         on: function(eventName, selector, method) {
-            return this.delegate(eventName, selector, method);
+            return this.delegate(selector, eventName, method);
         },
 
         /**
